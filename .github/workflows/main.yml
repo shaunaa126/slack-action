@@ -33,5 +33,5 @@ jobs:
           method: conversations.members
           args: |
             {
-              "channel": "general"
+              "channel": "C01RJUQRPP0"
             }
