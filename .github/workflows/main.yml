@@ -39,4 +39,4 @@ jobs:
 
       - name: Parse Slack Response
         run: |
-          echo ${{ steps.slackcall.outputs.* }}
+          echo ${{ steps.slackcall.output }}
