@@ -16,7 +16,7 @@ method.forEach(methodPart => {
 })
 
 methodFn(args).then(
-  result => console.log(result),
+  result => core.setOutput("result", result),
   error => {
     console.log(error.data)
     core.setFailed(error.message)
