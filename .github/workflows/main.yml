@@ -25,7 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # - uses: actions/checkout@v2
 
-      - name: Slack Message                     
+      - name: Slack Message
+        id: slackcall
         uses: shaunaa126/slack-action@1.0
         env:
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}   
@@ -35,3 +36,7 @@ jobs:
             {
               "channel": "C01RJUQRPP0"
             }
+
+      - name: Parse Slack Response
+        run: |
+          echo ${{ steps.slackcall.outputs.* }}
