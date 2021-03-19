@@ -41,4 +41,4 @@ jobs:
         run: |
           echo ${{ steps.slackcall.outputs.result }}
           echo "Members: ${{ fromJson(steps.slackcall.outputs.result).members }}"
-          echo "Json Output: ${{ toJson(steps.slackcall.outputs.result) }}"
+          echo "Json Output: ${{ toJson(steps.slackcall.outputs.result).members }}"
