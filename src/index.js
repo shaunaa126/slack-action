@@ -16,7 +16,10 @@ method.forEach(methodPart => {
 })
 
 methodFn(args).then(
-  result => core.setOutput("result", JSON.stringify(result)),
+  result => { 
+    console.log(result)
+    core.setOutput("result", JSON.stringify(result))
+  },
   error => {
     console.log(error.data)
     core.setFailed(error.message)
