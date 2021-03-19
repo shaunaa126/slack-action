@@ -27,7 +27,7 @@ jobs:
 
       - name: Slack Message
         id: slackcall
-        uses: shaunaa126/slack-action@1.0
+        uses: shaunaa126/slack-action@master
         env:
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}   
         with:
