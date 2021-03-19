@@ -40,4 +40,4 @@ jobs:
       - name: Parse Slack Response
         run: |
           echo ${{ steps.slackcall.outputs.result }}
-          echo "Members: ${{ fromJson(steps.slackcall.outputs.result).members }}"
+          echo "Members: ${{ fromJson(steps.slackcall.outputs.result).ok }}"
