@@ -55,5 +55,5 @@ jobs:
           args: |
             {
               "channel": "C01RGBRJ29M",
-              "users": "${{ fromJson(steps.slackcall.outputs.result).members }}"
+              "users": "U01RJUKQGEA"
             }
