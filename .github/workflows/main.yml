@@ -25,6 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # - uses: actions/checkout@v2
 
+      # users from #a-cool-project
       - name: Slack Get Members from Channel
         id: slackcall
         uses: shaunaa126/slack-action@master
@@ -43,6 +44,7 @@ jobs:
           echo "Members: ${{ fromJson(steps.slackcall.outputs.result).members }}"
           echo "Json Output: ${{ toJson(steps.slackcall.outputs.result) }}"
 
+      # users add to #a-new-project
       - name: Slack Invite Members to Channel
         id: slackcall2
         uses: shaunaa126/slack-action@master
@@ -53,5 +55,5 @@ jobs:
           args: |
             {
               "channel": "C01RGBRJ29M",
-              "users": "U01RJUKQGEA"
+              "users": "${{ fromJson(steps.slackcall.outputs.result).members }}"
             }
